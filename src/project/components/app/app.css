@@ -1,3 +1,30 @@
+body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
+	padding:0;
+	margin:0;}
+ul,ol{
+	list-style:none;}
+img{
+	display:block;
+	border:0;}
+input{
+    /*去掉高亮*/
+	outline:none;}
+header,footer,section,main,nav{
+	display:block;}
+body{
+	font-size:.193237rem;
+	font-family:"微软雅黑";
+	color:#3e3e3e;}
+a{
+	text-decoration:none;
+	color:#0dc441;}
+a:hover{
+	text-decoration:underline;}
+i{font-style:normal;}
+
 .lc_menu{position:absolute;bottom:0;}
-.lc_menu ul{list-style-type:none;}
-.lc_menu li{float: left;margin:0 60px;}
+.lc_menu ul{padding:.169082rem .008052rem 0;border-top:.008052rem solid #58BC58;overflow:hidden;background:#F9F9F9;}
+.lc_menu li{float: left;width:1.996779rem;text-align:center;}
+/* .lc_menu li i{display:block;width:.676329rem;height:.676329rem;margin:0 auto;background:url('../../img/menu_bg.fw.png') no-repeat 0 0;} */
+.lc_menu li a{line-height:.338164rem;font-size:.241546rem;color:#213F71;}
+.lc_menu li a img{width:.676329rem;height:.724638rem;margin:0 auto;}
