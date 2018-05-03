@@ -1,0 +1,8 @@
+.xcarousel{position:relative;width:810px;height:320px;overflow:hidden;}
+.xcarousel img{display: block;}
+.xcarousel ul{position:absolute;overflow:hidden;list-style: none;padding:0;margin:0;}
+.xcarousel ul.horizontal li{float:left;}
+.xcarousel ul.fade li{position:absolute;left:0;top:0;}
+.xcarousel .page{position:absolute;overflow:hidden;right:50%;bottom:0;transform:translate(50%,0);margin-bottom:27px;}
+.xcarousel .page span{display:block;float:left;margin:0 2px;width:24px;height:6px;background-color:#BAB9B9;cursor: pointer;}
+.xcarousel .page span.active{background-color: rgba(255,165,0,1)}

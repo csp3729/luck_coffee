@@ -1,0 +1,5 @@
+.help{display:flex;flex-direction: column;}
+.help h1{height: 150px;font-size: 50px;line-height: 150px;color:#000;text-align: center;}
+.help ul{padding-left: 50px;}
+.help ul li a{display:block;height: 158px;border-bottom: 1px solid #ccc;font-size: 48px;line-height: 158px;color:#000;}
+.help .btn{height: 140px;background:#B9CFE6;font-size: 44px;color:#fff;text-align: center;margin:200px 50px 0 50px;border-radius: 30px;border:0 none;}
