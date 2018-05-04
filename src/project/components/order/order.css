@@ -1,0 +1,4 @@
+.order{display: flex;flex-direction: column;}
+.order h1{height: 1.207729rem;font-size: 50px;text-align: center;line-height: 1.207729rem;border-bottom: 0.008052rem solid #ccc;}
+.order ul{display:flex;height: 1.046699rem;}
+.order ul li{flex:1;font-size: 48px;line-height: 1.046699rem;text-align: center;}

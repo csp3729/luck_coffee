@@ -1,0 +1,20 @@
+.shoppingcar h2{width: 100%;font-size:0.499195rem;font-weight:bold;line-height:1.143317rem;text-align: center;padding-top: 0.322061rem;}
+.shoppingcar .img{width:100%;height:1.803543rem;}
+.shoppingcar .main{height: 11.835749rem;background:#F6F6F6;overflow-x:hidden;}
+.shoppingcar .main li{width:100%;height:1.964573rem;overflow: hidden;background: #fff;}
+.shoppingcar .main li .check{width:1.320451rem;padding-top: 0.708535rem;padding-left: 0.402576rem;float: left;}
+.shoppingcar .main li .check .check1{display:block;width:0.563607rem;height:0.563607rem;background: #94B7DA;color:#fff;border-radius:50%;}
+.shoppingcar .main li .title{padding-top: 0.57971rem;font-size:0.402576rem;font-weight:bold;float: left;}
+.shoppingcar .main li .title .pop{width: 1.610306rem;height: 0.289855rem;font-size:0.241546rem;color:#fff;background: #E06E11;margin-top: 0.040258rem;margin-left: 0.144928rem;}
+.shoppingcar .main li .title p{font-size:0.225443rem;font-weight:100;}
+.shoppingcar .main .choose{width: 3.059581rem;padding-top:0.708535rem;float: right;font-size:0.305958rem;}
+.shoppingcar .main .choose span{margin-right: 0.201288rem;display:block;float: left;}
+.shoppingcar .main .choose .price{font-weight:bold;}
+.shoppingcar .main .choose .jian,.shoppingcar .main .choose .jia{width: 0.483092rem;height:0.483092rem;font-size:0.483092rem;line-height:0.442834rem;border:1px solid #82ABD4;border-radius:50%;text-align: center;color:#8FB3D8;}
+.shoppingcar .main .choose .num{color:#8FB3D8;}
+.shoppingcar .main .choose .jia{background: #81AAD2;color:#fff;}
+.shoppingcar .sum{width: 100%;height: 1.449275rem;font-size:0.450886rem;font-weight:bold;overflow: hidden;}
+.shoppingcar .sum .sum_l{width: 6.8438rem;padding-left: 0.386473rem;padding-top: 0.322061rem;float: left;}
+.shoppingcar .sum .sum_l span{font-size:0.386473rem;font-weight:100;}
+.shoppingcar .sum .sum_l p{font-size:0.257649rem;font-weight:100;color:#E78F47;}
+.shoppingcar .sum .sum_r{float: left;width:2.769726rem;line-height: 1.449275rem;color:#fff;background: #89AFD6;text-align:center;}

@@ -21,7 +21,6 @@ export default {
                     'auth':window.localStorage.getItem('token')
                 }
             }).then((res) => {
-                console.log(res);
                 if(!res.data.status && res.data.message == 'unauth'){
                     router.push({name:'login'});
                 }else{
@@ -35,6 +34,7 @@ export default {
 
     post(_url,_params = {}){
         return new Promise((resolve,reject) => {
+            let a = 
             axios({
                 url:filterUrl(_url),
                 method:'post',
@@ -60,5 +60,17 @@ export default {
                 reject(error);
             })
         })
-    }
+    },
+
+    goods(_url,_params = {}){
+        return new Promise((resolve,reject)=>{
+            axios({
+                url:filterUrl(_url),
+                data:_params,
+                method:'get'
+            }).then((res)=>{
+                resolve(res.data);
+            })
+        })
+    },
 }

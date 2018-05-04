@@ -25,10 +25,10 @@
                     <div v-for="(item,index) in classify" :key="item" :id="'CL'+index">
                         <h3>{{item}}</h3>
                         <ul>
-                            <li v-for="(item,index) in goodsClassif[index]" :key="index" :id="item.id" @click="show($event)">
+                            <li v-for="(item,index) in goodsClassif[index]" :key="index" :id="item._id" @click="show($event)">
                                 <img :src="item.url">
-                                <h4>{{item.pornameE}}</h4>
-                                <p>{{item.pornameC}}</p>
+                                <h4>{{item.pronameC}}</h4>
+                                <p>{{item.pronameE}}</p>
                                 <span>￥{{item.price}}</span>
                             </li>
                         </ul>
@@ -36,36 +36,27 @@
                 </div>
             </div>
         </div>
-        <div class="shade">
+        <div class="shade" v-show="details">
             <div class="detailed"  @click="fun($event)">
-            <span id="end">&times;</span>
+            <span id="end" class="end">&times;</span>
                 <div id="select">
                     <div class="specification select">
                         <span>规格</span>
-                        <!-- <input type="radio" name="specification" id="little" > -->
-                        <!-- <input type="radio" name="specification" id="big"> -->
                         <div class="big" :class="[select.specification =='大' ? activeClass : '']">大</div>
                         <div class="little" :class="[select.specification =='小' ? activeClass : '']">小</div>
                     </div>
                     <div class="temperature select">
                         <span>温度</span>
-                        <!-- <input type="radio" name="temperature" id="ice" > -->
-                        <!-- <input type="radio" name="temperature" id="hot"> -->
                         <div class="ice" :class="[select.temperature =='冰' ? activeClass : '']">冰</div>
                         <div class="hot" :class="[select.temperature =='热' ? activeClass : '']">热</div>
                     </div>
                     <div class="sugar select">
                         <span>糖度</span>
-                        <!-- <input type="radio" name="sugar" id="singleSugar" > -->
-                        <!-- <input type="radio" name="sugar" id="halfSugar"> -->
-                        <div class="singlesugar" :class="[select.sugar =='单糖' ? activeClass : '']">单糖</div>
                         <div class="halfsugar" :class="[select.sugar =='半糖' ? activeClass : '']">半糖</div>
+                        <div class="singlesugar" :class="[select.sugar =='单糖' ? activeClass : '']">单糖</div>
                     </div>
                     <div class="milk select">
                         <span>奶　</span>
-                        <!-- <input type="radio" name="milk" id="noneMilk"> -->
-                        <!-- <input type="radio" name="milk" id="singleMilk"> -->
-                        <!-- <input type="radio" name="milk" id="doubleMilk"> -->
                         <div class="nonemilk" :class="[select.milk =='无奶' ? activeClass : '']">无奶</div>
                         <div class="singlemilk" :class="[select.milk =='单份奶' ? activeClass : '']">单份奶</div>
                         <div class="doublemilk" :class="[select.milk =='双份奶' ? activeClass : '']">双份奶</div>
@@ -78,7 +69,7 @@
                 <div class="goodsQty">
                     <div class="Ql">
                         <span>￥{{goods.price}}</span>
-                        <p>标准咖啡 {{select.specification}}杯 + {{select.temperature}} + {{select.sugar}} + {{select.milk}}</p>
+                        <p>{{goods.pronameC}} {{select.specification}}杯 + {{select.temperature}} + {{select.sugar}} + {{select.milk}}</p>
                     </div>
                     <div class="Qr">
                         <span class="reduce">-</span>
@@ -95,7 +86,7 @@
                         <img src="../../img/collect.png">
                         收藏口味
                     </div>
-                    <div class="car">
+                    <div class="car" @click="add">
                         <img src="../../img/car.png">
                         加入购物车
                     </div>
@@ -154,17 +145,18 @@
                     {path:'src/project/img/timg3.jpg'},
                 ],
                 classify: [],
-
+                goodsList:[],
                 goodsClassif: [],
                 goods:'',
                 select:{
                     specification:'大',
                     temperature:'热',
-                    sugar:'单糖',
+                    sugar:'半糖',
                     milk:'无奶',
                     qty:1
                 },
                 activeClass:'brillancy',
+                details:false
 
             }
         },
@@ -181,15 +173,9 @@
                 setInterval(this.autoPlay,3000)
             },
 
-
+            
             show(e){
-                let $shade = $('.shade ');
-                $('.lc_menu').css('display','none')
-                $shade.css("display",'block').on('click','#end',function(){
-                    $shade.css('display','none')
-                    $('.lc_menu').css('display','block')
-                    //这里需要在关闭详情时候重置默认，未实现
-                });
+                this.details = true;
                 var e = e || window.event;
                 var target = e.target || e.srcElement;
                 if(target.nodeName != 'LI'){
@@ -197,9 +183,9 @@
                 } else {
                     var id = target.id;
                 }
-                for(var i=0;i<goodslist.length;i++){
-                    if(goodslist[i].id == id){
-                        this.goods = goodslist[i];
+                for(var i=0;i<this.goodsList.length;i++){
+                    if(this.goodsList[i]._id == id){
+                        this.goods = this.goodsList[i];
                     }
                 }
             },
@@ -234,35 +220,61 @@
                     }
                 } else if(tarName == 'add'){
                     this.select.qty += 1;
-                } else if(tarName == 'car'){
-                    console.log('加入购物车,未实现')
+                } else if(tarName == 'end'){
+                    this.details = false;
+                    this.select.specification = '大'
+                    this.select.temperature = '热'
+                    this.select.sugar = '单糖'
+                    this.select.milk = '无奶'
+                    this.select.qty = 1
                 }
             },
             
+            add:function(){
+                let goods = this.goods
+                goods.specification = this.select.specification;
+                goods.temperature = this.select.temperature;
+                goods.sugar = this.select.sugar;
+                goods.milk = this.select.milk;
+                goods.qty = this.select.qty;
+                http.post('shoppingcaradd',goods).then((res)=>{
+                    if(res.status){
+                        this.details = false;
+                        this.select.specification = '大'
+                        this.select.temperature = '热'
+                        this.select.sugar = '单糖'
+                        this.select.milk = '无奶'
+                        this.select.qty = 1
+                    }
+                })
+            }
 
         },
         mounted(){
             this.play();
 
-            http.get('showproducts').then((res)=>{
-                console.log(res)
-            })
+            http.goods('showproducts').then((res)=>{
+                if(res.status){
+                    this.goodsList = res.data
+                }
+                for(var i=0;i<this.goodsList.length;i++){
+                    if(this.classify.indexOf(this.goodsList[i].classify)<0){
+                        this.classify.push(this.goodsList[i].classify)
+                    };
+                }
 
-            for(var i=0;i<goodslist.length;i++){
-                if(this.classify.indexOf(goodslist[i].classify)<0){
-                    this.classify.push(goodslist[i].classify)
-                };
-            }
-
-            for(var i=0;i<this.classify.length;i++){
-                var mes = this.classify[i]
-                this.goodsClassif[i] = [];
-                for(var j=0;j<goodslist.length;j++){
-                    if(goodslist[j].classify === mes){
-                        this.goodsClassif[i].push(goodslist[j])
+                for(var i=0;i<this.classify.length;i++){
+                    var mes = this.classify[i]
+                    this.goodsClassif[i] = [];
+                    for(var j=0;j<this.goodsList.length;j++){
+                        if(this.goodsList[j].classify === mes){
+                            this.goodsClassif[i].push(this.goodsList[j])
+                        }
                     }
                 }
-            }
+            })
+
+            
         },
     }
 </script>

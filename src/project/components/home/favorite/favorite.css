@@ -1,0 +1,77 @@
+.title{
+    margin-left:.193237rem;
+}
+.title img{
+    float: left;
+    margin-top:.185185rem;
+}
+.title h2{
+    
+    height: .99839rem;
+    line-height: .99839rem;
+    font-size:56px;
+    text-align:center;
+}
+.good{
+    width: 9.541063rem;
+    height: 3.446055rem;
+    margin:0 auto;
+    
+}
+.good .head{
+    position: relative;
+}
+.good .head h3{
+    /* float: left; */
+    font-size:44px;
+    height: 1.030596rem;
+    line-height: 1.030596rem;
+}
+.good .head img{
+    position: absolute;
+    top:.378422rem;
+    right:.241546rem;
+
+}
+.good .content{
+    display: flex;
+}
+.good .content .left{
+    width: 1.900161rem;
+    height: 1.876006rem;
+    margin-left:.37037rem;
+    margin-right:.289855rem;
+
+}
+.good .content .center{
+    width: 4.025765rem;
+    height: 2.117552rem;
+    display: flex;
+    flex-direction: column;
+}
+.good .content .right{
+    width: 2.753623rem;
+    height: 2.117552rem;
+    position: relative;
+}
+.good .content .right span{
+    display: inline-block;
+    width: .611916rem;
+    height: .611916rem;
+    line-height: .611916rem;
+    background: #81AAD2;
+    border-radius:50%;
+    color:#fff;
+    font-size:76px;
+    text-align: center;
+    position: absolute;
+    top:1.207729rem;
+    right:0;
+}
+.good .content .center span{
+    flex:1;   
+}
+.good .content .center .price{
+    font-size:40px;
+    font-weight:bold;  
+}

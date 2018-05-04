@@ -17,6 +17,8 @@ import userWallet from '../components/user/userWallet/wallet.vue'
 import loginComponent from '../components/user/login/login.vue'
 import registerComponent from '../components/user/register/register.vue'
 import docComponent from '../components/user/userDoc/doc.vue'
+import discountsComponent from '../components/home/discounts/discounts.vue'//用户在线订单
+import favoriteComponent from '../components/home/favorite/favorite.vue' //口味收藏
 
 // import loginComponent from '../components/login/login.vue' //登录
 
@@ -34,8 +36,9 @@ const router = new VueRouter({
         {path:'/wallet',component:userWallet},
         {path:'/login',component:loginComponent,name:"login"},
         {path:'/register',component:registerComponent,name:'register'},
-        {path:'/coffee',component:docComponent,name:'coffee'}
-        
+        {path:'/coffee',component:docComponent,name:'coffee'},
+        {path:'/discounts',component:discountsComponent,name:'discounts'},
+        {path:'/favorite',component:favoriteComponent,name:'favorite'}
 
     ]
 })

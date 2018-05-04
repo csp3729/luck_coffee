@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken')
 module.exports = {
     register(app){
         app.post('/login',async (req, res) => {
+            console.log(req)
             let username = req.body.username;
             let password = req.body.password;
             let result = await db.select('users', {username,password});

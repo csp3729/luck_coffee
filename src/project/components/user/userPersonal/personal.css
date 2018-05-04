@@ -1,9 +1,9 @@
 
 html,body{height: 100%;}
 .personal{height: 100%;display: flex;flex-direction: column;}
-.personal h1{text-align: center;padding:30px 0;}
-.personal ul{padding-left: 50px;}
-.personal ul li a{display:block;height: 150px;border-bottom:1px solid #ccc;font-size: 44px;line-height: 150px;color:#000;display:flex;justify-content: space-between;padding-right: 50px;}
-.personal ul li:nth-child(1) a{height: 200px;line-height: 200px;border-top:1px solid #ccc;}
-.personal .btn{height: 158px;background:#B9CFE6;font-size: 44px;color:#fff;line-height: 158px;margin: 30px 50px 0 50px;border-radius: 18px;}
-.personal ul li:nth-child(1) a span.right{display:block;width: 200px;height: 200px;background:url(../../../img/pic.jpg) no-repeat;border-radius: 50%;}
+.personal h1{text-align: center;padding:.241546rem 0;}
+.personal ul{padding-left: .402576rem;}
+.personal ul li a{display:block;height: 1.207729rem;border-bottom:.008052rem solid #ccc;font-size: .354267rem;line-height: 1.207729rem;color:#000;display:flex;justify-content: space-between;padding-right: .402576rem;}
+.personal ul li:nth-child(1) a{height: 1.610306rem;line-height: 1.610306rem;border-top:.008052rem solid #ccc;}
+.personal .btn{height: 1.272142rem;background:#B9CFE6;font-size: .354267rem;color:#fff;line-height: 1.272142rem;margin: .241546rem .402576rem 0 .402576rem;border-radius: .144928rem;}
+.personal ul li:nth-child(1) a span.right{display:block;width: 1.610306rem;height: 1.610306rem;background:url(../../../img/pic.jpg) 1.610306rem 1.610306rem no-repeat ;border-radius: 50%;}

@@ -1,6 +1,6 @@
 html,body{height: 100%;}
-.register{height: 100%;display: flex;flex-direction: column;padding:0 115px;padding-top: 200px;}
-.register input{height: 190px;font-size: 40px;border:0 none;border-bottom:1px solid #ccc;}
-.register .btn{background:#B9CFE6;color:#fff;font-size: 44px;border-radius: 18px;}
-.register p{height: 100px;line-height: 100px;font-size: 44px;color:blue;}
-.register .error{font-size: 44px;color:red;}
+.register{height: 100%;display: flex;flex-direction: column;padding:0 .925926rem;padding-top: 1.610306rem;}
+.register input{height: 1.529791rem;font-size: .322061rem;border:0 none;border-bottom:.008052rem solid #ccc;}
+.register .btn{background:#B9CFE6;color:#fff;font-size: .354267rem;border-radius: .144928rem;}
+.register p{height: .805153rem;line-height: .805153rem;font-size: .354267rem;color:blue;}
+.register .error{font-size: .354267rem;color:red;}
