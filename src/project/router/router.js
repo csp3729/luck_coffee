@@ -19,6 +19,7 @@ import registerComponent from '../components/user/register/register.vue'
 import docComponent from '../components/user/userDoc/doc.vue'
 import discountsComponent from '../components/home/discounts/discounts.vue'//用户在线订单
 import favoriteComponent from '../components/home/favorite/favorite.vue' //口味收藏
+import confirmOrder from '../components/shoppingcar/confirmOrder/confirmOrder.vue' //确认订单
 
 // import loginComponent from '../components/login/login.vue' //登录
 
@@ -38,7 +39,8 @@ const router = new VueRouter({
         {path:'/register',component:registerComponent,name:'register'},
         {path:'/coffee',component:docComponent,name:'coffee'},
         {path:'/discounts',component:discountsComponent,name:'discounts'},
-        {path:'/favorite',component:favoriteComponent,name:'favorite'}
+        {path:'/favorite',component:favoriteComponent,name:'favorite'},
+        {path:'/cOrder',component:confirmOrder,name:'cOrder'}
 
     ]
 })

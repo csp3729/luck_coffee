@@ -1,0 +1,24 @@
+.confirmOrder{overflow:hidden;}
+.confirmOrder img{display:inline-block;width: 0.37037rem;height: 0.611916rem;margin-left: 0.241546rem;float: left;margin-top: 0.297907rem;}
+.confirmOrder h2{font-size:0.499195rem;font-weight:bold;line-height:1.143317rem;margin-left: 3.413849rem;float: left;}
+.confirmOrder .time{width: 100%;height: 2.012882rem;}
+.confirmOrder .time .box{width: 2.173913rem;height:0.869565rem;border:0.017503rem dotted #7CA7D2;border-radius:.362319rem;text-align: center;font-size: 34px;padding-top:.048309rem;margin-top:0.410628rem;margin-left: 0.402576rem;float: left;margin-right: 1.610306rem;}
+.confirmOrder .time .box .ziTi{display: inline-block;width: 1.046699rem;height:0.547504rem;border-radius: .305958rem;background: #7CA7D2;color:#fff;margin-top: 0.032206rem;padding-top: 0.193237rem;}
+.confirmOrder .time .box .waiSong{color:#87AED6;}
+.confirmOrder .time .box1{float: right;width: 2.616747rem;font-size:0.305958rem;text-align:right;margin-right: 0.402576rem;margin-top: 0.41868rem;}
+.confirmOrder .time .box1 p{font-weight:bold;}
+.confirmOrder .time .box1 b{font-size:55px;color:#7CA7D2;}
+.confirmOrder .xian{width: 100%;height: 0.289855rem;background: #F6F6F6;margin-top: 1.046699rem;}
+.confirmOrder .main{width: 100%;height: 11.78744rem;padding-left: 0.402576rem;}
+.confirmOrder .main p{font-size:0.402576rem;line-height: 0.68438rem;}
+.confirmOrder .main .zi{padding-top: 0.241546rem;}
+.confirmOrder .main .fangshi{width: 100%;height: 0.563607rem;margin-top: 0.68438rem;padding-left: 2.455717rem;overflow: hidden;font-size:0.338164rem;}
+.confirmOrder .main .fangshi span{display:block;width: 0.547504rem;height: 0.547504rem;border:0.016103rem solid #ccc;border-radius:50%;float: left;margin-right: 0.161031rem;}
+.confirmOrder .main .fangshi i{float: left;}
+.confirmOrder .main .fangshi .dabao{background: #94B7DA;margin-left: 0.805153rem;}
+.confirmOrder .main .ding{font-size:0.289855rem;margin-top: 0.563607rem;}
+.confirmOrder .main .container{}
+.confirmOrder .sum{width: 100%;height: 175px;font-size:0.563607rem;font-weight:bold;}
+.confirmOrder .sum .sum_l{width: 3.059581rem;padding-top: 0.442834rem;padding-left: 0.402576rem;float: left;}
+.confirmOrder .sum .sum_l span{font-size:0.322061rem;}
+.confirmOrder .sum .sum_r{width: 3.623188rem;line-height: 1.409018rem;background: #89AFD6;color:#fff;float: right;text-align:center;}

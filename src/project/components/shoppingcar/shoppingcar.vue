@@ -3,7 +3,7 @@
         <h2>购物车</h2>
         <img class="img" src="../../img/car_1.fw.png" />
         <ul class="main">
-            <li v-for="(obj,index) in dataset" :key="index" :id="index">
+            <li v-for="(obj,index) in dataset" :id="index">
                 <div class="check">
                     <input type="checkbox" checked class="check1" @click="cleck1($event)">
                 </div>
@@ -26,8 +26,7 @@
                 ￥{{sum_price}}
                 <p>面价满￥35免配送费</p>
             </div>
-            <!-- <router-link to="/cOrder"><div class="sum_r">{{val}}</div></router-link> -->
-            <div class="sum_r">去结算</div>
+            <router-link to="/cOrder"><div class="sum_r">{{val}}</div></router-link>
         </div>
         <spinner v-if="show"></spinner>
     </div>
