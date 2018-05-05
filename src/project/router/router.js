@@ -25,7 +25,7 @@ import confirmOrder from '../components/shoppingcar/confirmOrder/confirmOrder.vu
 
 const router = new VueRouter({
     routes: [
-        {path: '/home', component: homeComponent, name: 'home',},
+        {path: '/', component: homeComponent, name: 'home',},
         {path: '/goodslist', component: goodslistComponent, name: 'goodslist'},
         {path: '/order', component: orderComponent, name: 'order'},
         {path: '/shoppingcar', component: shoppingcarComponent, name: 'shoppingcar'},

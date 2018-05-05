@@ -9,7 +9,7 @@
     
     height: .99839rem;
     line-height: .99839rem;
-    font-size:56px;
+    font-size:.450886rem;
     text-align:center;
 }
 .good{
@@ -23,7 +23,7 @@
 }
 .good .head h3{
     /* float: left; */
-    font-size:44px;
+    font-size:.354267rem;
     height: 1.030596rem;
     line-height: 1.030596rem;
 }
@@ -62,7 +62,7 @@
     background: #81AAD2;
     border-radius:50%;
     color:#fff;
-    font-size:76px;
+    font-size:.611916rem;
     text-align: center;
     position: absolute;
     top:1.207729rem;
@@ -72,6 +72,6 @@
     flex:1;   
 }
 .good .content .center .price{
-    font-size:40px;
+    font-size:.322061rem;
     font-weight:bold;  
 }

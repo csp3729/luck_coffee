@@ -15,7 +15,7 @@ ul li img{
 .lc .bann{
     height:6.521739rem;
     /* background: #24842b; */
-    margin-bottom: 1px;
+    margin-bottom: .008052rem;
     position:relative;
     z-index: -100;
     overflow:hidden;
@@ -53,7 +53,7 @@ ul li img{
     width: .128824rem;
     height: .128824rem;
     margin:0 .096618rem;
-    border: 1px solid #f9f9f9;
+    border: .008052rem solid #f9f9f9;
     border-radius:50%;
     }
 .lc .bann .bullet .active{
@@ -101,14 +101,14 @@ ul li img{
 
 .lc .main ul li a .span1{
     display: block;
-    font-size:44px;
+    font-size:.354267rem;
     padding-top:.402576rem;
     margin-bottom:.161031rem;
     
 }
 .lc .main ul li a .span2{
     display: block;
-    font-size:30px;
+    font-size:.241546rem;
 }
 .lc .main ul li .box{
     width: 2.190016rem;
@@ -117,7 +117,7 @@ ul li img{
     border:.008052rem dotted #A6C3E0;
     border-radius:.362319rem;
     text-align: center;
-    font-size: 34px;
+    font-size: .273752rem;
     padding-top:.048309rem;
 }
 .lc .main ul li .box2{
@@ -127,6 +127,7 @@ ul li img{
 }
 .lc .main ul li .box2 img{
     margin-left:.402576rem;
+    height: .853462rem;
 }
 .lc .main ul li .box,.box2{
     position: absolute;

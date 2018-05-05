@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div class="fx">
         <!-- <h1>test</h1> -->
-        <router-view></router-view>
+        <div class="main">
+            <router-view></router-view>
+        </div>
         <div class="lc_menu">
             <menus></menus>
         </div>
