@@ -3,7 +3,7 @@
         <h2>购物车</h2>
         <img class="img" src="../../img/car_1.fw.png" />
         <ul class="main">
-            <li v-for="(obj,index) in dataset" :id="index">
+            <li v-for="(obj,index) in dataset" :id="index" :key="index">
                 <div class="check">
                     <input type="checkbox" checked class="check1" @click="cleck1($event)">
                 </div>
@@ -51,8 +51,8 @@
         mounted(){
             this.show = true;
             http.get('showshopping').then((res)=>{
+                this.dataset = res.data;
                 for(var i=0;i<res.data.length;i++){
-                    this.dataset.push(res.data[i].goods);
                     this.sum_price = this.sum_price*1 + this.dataset[i].price*1 * this.dataset[i].qty*1;
                 }
             });

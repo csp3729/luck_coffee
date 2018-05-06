@@ -29,9 +29,9 @@ module.exports = {
             return apiResult(false, error);
         }
     },
-    async update(_collection, _data){
+    async update(_collection, _query,_update,_upsert,_multi){
         try {
-            let result = await db.collection(_collection).update(_data);
+            let result = await db.collection(_collection).update(_query,_update,_upsert,_multi);
             return result
         } catch(error){
             return apiResult(false, error);

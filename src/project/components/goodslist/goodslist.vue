@@ -1,7 +1,7 @@
 <template>
     <div>
+        <h1 class="gl_h1">选择咖啡和小食</h1>
         <div class="goodslist">
-            <h1 class="gl_h1">选择咖啡和小食</h1>
             <div class="gl_main">
                 <div class="bann">
                     <transition-group tag="ul" name="image">
@@ -107,41 +107,6 @@
     import http from '../../utils/httpclient.js'
     import './goodslist.css';
 
-    var goodslist = [
-                    {id:1,pornameE:'标准美式',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'大师咖啡'},
-                    {id:2,pornameE:'标准美式',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'零度拿铁'},
-                    {id:3,pornameE:'卡布奇诺瑞纳冰',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'瑞纳冰'},
-                    {id:4,pornameE:'加浓美式',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'大师咖啡'},
-                    {id:5,pornameE:'红茶拿铁',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'零度拿铁'},
-                    {id:6,pornameE:'焦糖标准美式',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'大师咖啡'},
-                    {id:7,pornameE:'百香芒果瑞纳冰',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'瑞纳冰'},
-                    {id:8,pornameE:'抹茶拿铁',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'零度拿铁'},
-                    {id:9,pornameE:'焦糖加浓美式',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'大师咖啡'},
-                    {id:10,pornameE:'热巧克力',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'经典饮品'},
-                    {id:11,pornameE:'巧克力核桃麦芬',pornameC:'Americano',price:'21',url:'src/project/img/1.jpg',
-                    describe:'Espresso与水的黄金配比，带来最纯粹的咖啡芬芳，成为脑海中挥之不去的绝妙体验。',
-                    classify:'健康轻食'},
-                ]
     export default {
         data(){
             return {
@@ -245,13 +210,15 @@
                 goods.milk = this.select.milk;
                 goods.qty = this.select.qty;
                 http.post('shoppingcaradd',goods).then((res)=>{
-                    if(res.status){
+                    if(res.n > 0){
                         this.details = false;
                         this.select.specification = '大'
                         this.select.temperature = '热'
                         this.select.sugar = '单糖'
                         this.select.milk = '无奶'
                         this.select.qty = 1
+                    } else {
+                        console.log(res)
                     }
                 })
             }

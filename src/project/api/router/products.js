@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 module.exports = {
     manage(app){
         app.post('/productsadd', async (req,res)=>{
-            console.log(req)
             let data = {
                 pronameC:req.body.pronameC,
                 pronameE:req.body.pronameE,
@@ -19,7 +18,6 @@ module.exports = {
             // let url = req.body.url;
             // let describe = req.body.describe;
             // let classify = req.body.classify;
-            // console.log(pronameC)
             let result = await db.insert('lc_products', data);
             res.send(result);   
         }),
@@ -32,7 +30,6 @@ module.exports = {
         app.post('/productsdelete', async (req, res) => {
             let proid = req.body.proid;
             let result = await db.remove('lc_products', proid );
-            // console.log(proid)
             res.send(result);
         }),
         app.get('/showproducts', async (req, res) => {    
@@ -40,10 +37,17 @@ module.exports = {
                 res.send(result);
         }),
         app.post('/shoppingcaradd', async (req,res)=>{
-            console.log(req)
-            let goods = req.body
-            let result = await db.insert('shoppingcar', {goods});
-            res.send(result);   
+            let goodsId = req.body._id;
+            let pronameC = req.body.pronameC;
+            let price = req.body.price;
+            let specification = req.body.specification;
+            let temperature = req.body.temperature;
+            let sugar = req.body.sugar;
+            let milk = req.body.milk;
+            let qty = req.body.qty*1;
+            let query = {goodsId,pronameC,price,specification,temperature,sugar,milk}
+            let result = await db.update('shoppingcar', query,{$inc:{qty}},{upsert:true});
+            res.send(result)
         }),
         app.get('/showshopping', async (req, res) => {    
             let result = await db.select('shoppingcar');

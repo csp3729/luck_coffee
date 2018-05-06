@@ -1,7 +1,6 @@
-/* .goodslist{
-    position:absolute;
-    top:0;
-} */
+.goodslist{
+    overflow-x: hidden;
+}
 .gl_h1{
     font-size: .402576rem;
     line-height:.402576rem;
@@ -11,7 +10,7 @@
     margin-bottom:1px;
 }
 .gl_main{
-    /* height:15.016103rem; */
+    height:15.016103rem;
     overflow-x:hidden;
     background: #F9F9F9;
 }
