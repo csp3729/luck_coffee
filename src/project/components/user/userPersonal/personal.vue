@@ -27,18 +27,13 @@
         },
         methods:{
             esc:function(){
-                var cookies = document.cookie;
-                var arr = cookies.split('=');
-                var d = new Date();
-                d.setDate(d.getDate()-1);
-                document.cookie = "username="+arr[1] + "; expires=" + d.toUTCString();
+                window.localStorage.removeItem('token');
                 this.$router.push({name:'user'});
             }
         },
         mounted:function(){
-            var cookies = document.cookie;
-            var arr = cookies.split('=');
-            $('li:nth-child(2) a span.right').html(arr[1]);
+            var username = window.localStorage.getItem('token');
+            $('li:nth-child(2) a span.right').html(username);
         }
     }
 </script>

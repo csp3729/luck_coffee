@@ -26,7 +26,6 @@
             login:function(){
                 http.post('login',this.data).then((res)=>{
                     console.log(res);
-                    document.cookie="username="+res.message;
                     if(res.status){
                         window.localStorage.setItem('token', res.data);
                         this.$router.push({name: 'user'});
